@@ -65,8 +65,8 @@ cacheSolve <- function(x, ...) {
   inversedMatrix <- x$getinverse()
   ## check if it is not a a NULL inverse matrix, i.e. if it exists
   if (sum(dim(inversedMatrix))!=0) {
-    ## if it exists, return stored inverse matrix after a corresponding message
-    ## and exit the function 
+    ## if it exists, return the stored inverse matrix (in invisible mode) 
+    ## after a corresponding message and exit the function 
     message("getting cached data")
     return( invisible(inversedMatrix) )
   }
@@ -77,6 +77,6 @@ cacheSolve <- function(x, ...) {
   inversedMatrix <- solve(dataMatrix, ...)
   ## set the inverse matrix but do not perform check (check has been done by solve() )
   x$setinverse(inversedMatrix, isCheckNeeded=FALSE)
-  # return the inverse matrix (add invisible if needed)
+  # return the inverse matrix (in invisible mode)
   invisible(inversedMatrix)
 }
