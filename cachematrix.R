@@ -7,7 +7,7 @@
 ##  myMatrix <- makeCacheMatrix( matrix(rnorm(100*100), 100, 100) ) # create 100-by-100 matrix
 ##  myMatrix$get()                                                  # show the created matrix
 ##  myMatrix$getinverse()                                           # no inverse matrix yet
-##  myMatrix$set( matrix(rnorm(100*100), 100, 100) )                # set new 100-by-100 matrix (only for existing object created with makeCacheMatrix)
+##  myMatrix$set( matrix(rnorm(100*100), 100, 100) )                # set new 100-by-100 matrix (only for <makeCacheMatrix> object)
 ##  myMatrix$setinverse( matrix(rnorm(100*100), 100, 100) )         # will fail as there is a check built in
 ##  cacheSolve(myMatrix)                                            # create an inverse matrix (invisible mode)
 ##  myMatrix$getinverse()                                           # show the inverse matrix
